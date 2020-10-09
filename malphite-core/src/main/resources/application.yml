@@ -1,13 +1,11 @@
 server:
   port: 8004
   max-http-header-size: 10000KB
-# Hibernate 相关配置
 spring:
   jpa:
     hibernate:
       ddl-auto: none
     show-sql: true
-  #数据池
   dbcp:
     max-active: 20
     max-wait: 60000
@@ -18,12 +16,13 @@ spring:
     test-while-idle: true
     test-on-borrow: false
     test-on-return: false
-  #数据库驱动
   datasource:
-    # 可省略驱动配置, spring-boot 会由url检测出驱动类型
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/malphite?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.13.108:3306/malphite?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: NP123456
+    password: 123456
     platform: mysql
     type: com.zaxxer.hikari.HikariDataSource
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
