@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>malphite-data</module>
         <module>malphite-core</module>
     </modules>
 </project>
