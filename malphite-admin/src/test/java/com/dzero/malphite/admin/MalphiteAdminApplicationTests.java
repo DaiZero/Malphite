@@ -1,13 +1,13 @@
-package com.dzero.malphite.core;
+package com.dzero.malphite.admin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MalphiteCoreApplicationTests {
+class MalphiteAdminApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

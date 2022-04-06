@@ -1,0 +1,42 @@
+server:
+  port: 8005
+  max-http-header-size: 10000KB
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  dbcp:
+    max-active: 20
+    max-wait: 60000
+    initial-size: 1
+    min-idle: 1
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/malphite?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai"
+    username: root
+    password: pw123456
+    type: com.zaxxer.hikari.HikariDataSource
+  sql:
+    init:
+      platform: mysql
+  boot:
+    # Spring Boot Admin 配置
+    admin:
+      client:
+        url: http://localhost:8005
+# Spring Boot Actuate 配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env,beans
+logging:
+  file:
+    path: ./logs
