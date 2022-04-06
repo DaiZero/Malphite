@@ -9,5 +9,4 @@ public class MalphiteCoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MalphiteCoreApplication.class, args);
 	}
-
 }
